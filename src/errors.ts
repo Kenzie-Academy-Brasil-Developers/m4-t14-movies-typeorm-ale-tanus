@@ -18,6 +18,7 @@ const handleErrors = (error: Error, req: Request, res: Response, _: NextFunction
         })
     }
     if(error instanceof ZodError){
+        console.log(error.message)
         return res.status(400).json({
             message: error.flatten().fieldErrors
         })
