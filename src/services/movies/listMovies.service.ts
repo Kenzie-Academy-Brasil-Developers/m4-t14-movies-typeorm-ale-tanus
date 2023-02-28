@@ -1,8 +1,8 @@
 import { Repository } from "typeorm"
 import { AppDataSource } from "../../data-source"
 import { Movie } from "../../entities"
-import { IMoviesReturn, IMoviesReturnAll } from "../../interfaces/movies.interfaces"
-import { returnAllMovies, returnMultipleMoviesSchema } from "../../schemas/movies.schemas"
+import { IMoviesReturnAll } from "../../interfaces/movies.interfaces"
+import { returnAllMovies } from "../../schemas/movies.schemas"
 
 export const listMoviesService = async (page:any, perPage:any, order:any, sort:any): Promise<IMoviesReturnAll> => {
 
